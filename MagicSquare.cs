@@ -5,16 +5,12 @@ namespace MagicSquare
     public class MagicSquare 
     {
         private int size;
-        private int startNumber;
-        private int endNumber;
         private int[,] grid;
 
-        public MagicSquare(int size, int startNumber)
+        public MagicSquare(int size)
         {
             this.size = size;
-            this.startNumber = startNumber;
             this.grid = new int[size, size];
-            this.endNumber = startNumber + (size*size);
         }
 
         public void InitializeGrid() 
@@ -66,56 +62,6 @@ namespace MagicSquare
                 }
             }
         }
-
-        private int ComputeNextRow(int row, int col)
-        {
-            var nextRow = row++;
-            if (nextRow >= size)
-                nextRow = 0;
-            return nextRow;
-        }
-        void foo(int n) {  
-	    int currCol = 0;
-	    int currRow = 0;
-	    int row = 0;
-            row--;
-
-            currCol++; currRow--;
-            if (currRow < 0) {
-                currRow = size - 1;
-            }
-            if (currCol > size - 1) {
-                currCol = 0;
-            }
-            if (grid[currRow, currCol] == 0) {
-                grid[currRow, currCol] = n;
-            }
-            else {
-                currRow--;
-            }
-        }
-
-        private void ComputeNextCol(int row, int col)
-        {
-	    int currCol = 0;
-	    int currRow = 0;
-	    int n = 0;
-            currCol++; currRow--;
-            if (currRow < 0) {
-                currRow = size - 1;
-            }
-            if (currCol > size - 1) {
-                currCol = 0;
-            }
-            if (grid[currRow, currCol] == 0) {
-                grid[currRow, currCol] = n;
-            }
-            else {
-                currRow--;
-            }
-
-        }
-
 
         public void PrintGrid()
         {

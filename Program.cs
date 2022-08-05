@@ -5,7 +5,7 @@ namespace MagicSquare
     {
         static void Main(string[] args)
         {
-            var ms = new MagicSquare(21,1);
+            var ms = new MagicSquare(7);
             ms.InitializeGrid();
             ms.Generate();
             ms.PrintGrid();
