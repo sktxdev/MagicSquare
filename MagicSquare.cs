@@ -75,14 +75,16 @@ namespace MagicSquare
                     colTotal[row] += grid[row, col]; 
                     Console.Write(num);
                 }
-                Console.Write($"{rowTotal,7:###0}");
+                // Uncomment this line to reveal totals
+                // Console.Write($"{rowTotal,7:###0}");
                 rowTotal = 0;
                 Console.WriteLine("\n");
             }
-            for (int i = 0; i<size; i++)
-            {
-                Console.Write($"{colTotal[i],7:###0}");
-            }
+            // Uncomment next 3 lines to reveal totals for each column
+            // for (int i = 0; i<size; i++)
+            // {
+            //     Console.Write($"{colTotal[i],7:###0}");
+            // }
         }
     }
 

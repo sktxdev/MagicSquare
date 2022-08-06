@@ -5,11 +5,13 @@ namespace MagicSquare
     {
         static void Main(string[] args)
         {
+            
+            Console.WriteLine("\n\n");
             var ms = new MagicSquare(7);
             ms.InitializeGrid();
             ms.Generate();
             ms.PrintGrid();
-            Console.WriteLine("\nDone\n");
+            Console.WriteLine("\n\n");
         }
     }
 }
